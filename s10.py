@@ -20,7 +20,7 @@ def echo_server(host, port):
                 rlist.add(conn)
             else:
                 msg = sock.recv(BUFSIZE)
-                if len(msg) == 0:
+                if len(msg) == 0 or msg == "close":
                     sock.close()
                     print "lost connection: %s" % sock
                     rlist.remove(sock)
@@ -28,9 +28,10 @@ def echo_server(host, port):
                 wlist.add(sock)
                 queue[sock].append(msg)
         for sock in w:
-            for msg in queue[sock]:
-                 print "send: %s" % msg
-                 sock.send(msg)
+            if msg !="close": 
+                for msg in queue[sock]:
+                     print "send: %s" % msg
+                     sock.send(msg)
             queue[sock] = []
 
     
