@@ -14,3 +14,4 @@ chmod 600 /home/box/.ssh/id_rsa.pub
 eval "$(ssh-agent -s)"
 eval "$(ssh-agent)"   
 ssh-add /home/box/.ssh/id_rsa
+#loook at http://pastebin.com/88rpiTiF
