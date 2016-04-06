@@ -20,4 +20,4 @@ touch /home/box/web/.emptyfile
 touch /home/box/web/public/.emptyfile
 touch /home/box/web/public/img/.emptyfile
 touch /home/box/web/public/css/.emptyfile
-touch /home/box/public/js/.emptyfile
+touch /home/box/web/public/js/.emptyfile
