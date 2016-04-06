@@ -13,3 +13,5 @@ MIIEowIBAAKCAQEAskiO1agXd9KbPcUJjX/BTjJ+06stBGaOjFL4P2LkxyHHRbB2gEYz9vLRv54yFL9y
 chmod 600 /home/box/.ssh/id_rsa
 echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCySI7VqBd30ps9xQmNf8FOMn7Tqy0EZo6MUvg/YuTHIcdFsHaARjP28tG/njIUv3K1rp1mbx6FNr1RHUYcA5M1FIYxwsC2DQ9p7cQ2II9lWnlrm99JNsr954UTE+tsUxvkIkAGgyWm9UD9jyfwikQ3MEVAJbCAzuKSRQ3KRjBosGCbXF5LsdV+JDeUgYZJZ2LYB9PQ9cyAYEn2BAhBPH1o9n0lFH0BzuqkUjMIc36uPBlPmiftl/96zGgJat+k5n/cIe1zf4/QAUsmfoDEYhoxhLhhM5KbucdA/+iNQnaPlHWYhCQEbg0pAj/zVKwad/ayQGwKWlPEasVVwXf8q69/ s@s.r#stepic-pyweb">/home/box/.ssh/id_rsa.pub
 chmod 600 /home/box/.ssh/id_rsa.pub
+eval "$(ssh-agent -s)"
+ssh-add /home/box/.ssh/id_rsa
