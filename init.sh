@@ -1,4 +1,5 @@
 sudo ﻿ln -sf /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/test.conf
+sudo rm -rf /etc/nginx/sites-enabled/default
 sudo /etc/init.d/nginx restart
 sudo ln -sf /home/box/web/etc/gunicorn.conf   /etc/gunicorn.d/test
 sudo /etc/init.d/gunicorn restart
@@ -17,6 +18,4 @@ sleep 2
 ssh-add ~/.ssh/id_rsa
 #loook for more complex way to do the same at http://pastebin.com/88rpiTiF
 cd ~/web
-git remote set-url --push origin 'git@github.com:zatuper/pywebstepic.git'                 
-                                                                                                                    
-                                   
+git remote set-url --push origin 'git@github.com:zatuper/pywebstepic.git'
