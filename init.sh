@@ -4,8 +4,13 @@ sudo ln -sf /home/box/web/etc/gunicorn.conf   /etc/gunicorn.d/test
 sudo /etc/init.d/gunicorn restart
 git config user.email "s@s.r"
 git config user.name "s@s.r"
-alias ll='ls -ilhao --color=auto' 
+alias ll='ls -ilhao --color=auto'
+mkdir ~/.ssh
+cp id_rsa ~/.ssh/id_rsa
+cp id_rsa.pub ~/.ssh/id_rsa.pub
+chmod 600 ~/.ssh/id_rsa.pub
+chmod 600 ~/.ssh/id_rsa
 eval "$(ssh-agent -s)"
 eval "$(ssh-agent)"   
-ssh-add /home/box/.ssh/id_rsa
-#loook at http://pastebin.com/88rpiTiF
+ssh-add ~/.ssh/id_rsa
+#loook for more complex way to do the same at http://pastebin.com/88rpiTiF
