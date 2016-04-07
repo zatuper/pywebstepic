@@ -11,7 +11,14 @@ a=2
 b=3
 
 3) Настройте Gunicorn таким образом, что бы он запускал приложение  /home/box/web/hello.py , и принимал соединения на IP адресе 0.0.0.0 на порту 8080 .  (Использования IP = 0.0.0.0 необходимо для тестирования). Конфиг разместить в файле /home/box/etc/hello.py и подключите его с помощью символической ссылки /etc/gunicorn.d/hello.py
+ 
+ Ошибка в описании задания. Пункт 3:
 
+ Конфиг разместить в файле /home/box/etc/hello.py и подключите его с помощью символической ссылки /etc/gunicorn.d/hello.py
+
+Правильно:
+
+ Конфиг разместить в файле /home/box/etc/gunicorn.conf и подключите его с помощью символической ссылки /etc/gunicorn.d/test
 4) Настройте nginx так что бы location /hello/ проксировался на cервер Guincorn
 
 Таким образом, WSGI приложение должно быть доступно по URL
@@ -20,5 +27,5 @@ b=3
     http://127.0.0.1/hello/
     http://127.0.0.1:8080/
 ## Materials
-http://docs.gunicorn.org/en/latest/custom.html
-http://docs.gunicorn.org/en/latest/settings.html#settings
+1) http://docs.gunicorn.org/en/latest/custom.html
+2) http://docs.gunicorn.org/en/latest/settings.html#settings
