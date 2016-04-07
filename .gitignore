@@ -1,4 +1,15 @@
+#unusual core.worktree
+#home/box/
+.bash_logout                                                         
+.bashrc                                                              
+.gitconfig                                                           
+.profile                                                             
+.viminfo                                                             
+
+
 # Byte-compiled / optimized / DLL files
+         
+
 __pycache__/
 *.py[cod]
 *$py.class
