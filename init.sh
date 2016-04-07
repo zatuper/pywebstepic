@@ -24,3 +24,4 @@ ssh-add ~/.ssh/id_rsa
 #loook for more complex way to do the same at http://pastebin.com/88rpiTiF
 cd ~/web
 git remote set-url --push origin 'git@github.com:zatuper/pywebstepic.git'
+ssh-add -l  
