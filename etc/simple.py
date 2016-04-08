@@ -15,7 +15,7 @@ spisok=''
 
 def application(env, start_response):
     start_response('200 OK', [('Content-Type', 'text/plain')])
-    resp = environ['QUERY_STRING'].split("&")
+    resp = env['QUERY_STRING'].split("&")
     print resp
     for arg in resp:
         response_body  = [arg+"\r\n"]
