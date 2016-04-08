@@ -13,4 +13,4 @@ alias ll='ls -ilhao --color=auto'
 cd ~/web
 
 source keys.sh
-source gitinit.sh
+source initgit.sh
