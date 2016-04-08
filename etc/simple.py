@@ -19,5 +19,5 @@ def application(env, start_response):
     print resp
     for arg in resp:
         response_body  = [arg+"\r\n"]
-    
+    print response_body
     return ["response_body"]
