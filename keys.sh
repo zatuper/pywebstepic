@@ -1,9 +1,9 @@
-if [ -e ~/.ssh] ; then
-mkdir ~/.ssh
-cp id_rsa ~/.ssh/id_rsa
-cp id_rsa.pub ~/.ssh/id_rsa.pub
-chmod 600 ~/.ssh/id_rsa.pub
-chmod 600 ~/.ssh/id_rsa
+if [ -e ~/.ssh ] ; then
+  mkdir ~/.ssh
+  cp id_rsa ~/.ssh/id_rsa
+  cp id_rsa.pub ~/.ssh/id_rsa.pub
+  chmod 600 ~/.ssh/id_rsa.pub
+  chmod 600 ~/.ssh/id_rsa
 fi
 #eval "$(ssh-agent -s)"
 if [ -z "$SSH_AUTH_SOCK" ] ; then
