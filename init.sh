@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 trap "set +x; sleep 1; set -x" DEBUG
 sudo ln -sf /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/test.conf
+sudo ln  /home/box/web/etc/nginx-main /etc/nginx/nginx.conf 
+
 #sudo rm -rf /etc/nginx/sites-enabled/default
 sudo mv /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default2   
 sudo mv /etc/gunicorn.d/django.example  /home/box/web/etc/django.example
