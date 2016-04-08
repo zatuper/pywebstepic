@@ -27,5 +27,7 @@ b=3
     http://127.0.0.1/hello/
     http://127.0.0.1:8080/
 ## Materials
+\n
 1) http://docs.gunicorn.org/en/latest/custom.html
 2) http://docs.gunicorn.org/en/latest/settings.html#settings
+3) http://hlabs.org/development/python/wsgi.html#id3
