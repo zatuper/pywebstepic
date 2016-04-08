@@ -11,6 +11,3 @@ sudo /etc/init.d/gunicorn restart
 alias ll='ls -ilhao --color=auto'
 
 cd ~/web
-git remote set-url --push origin 'git@github.com:zatuper/pywebstepic.git'
-source ssh-add ~/.ssh/id_rsa
-ssh-add -l  
