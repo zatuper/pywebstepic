@@ -1,8 +1,4 @@
-import multiprocessing
-
-def number_of_workers():
-    return (multiprocessing.cpu_count() * 2) + 1
-
+#!/usr/bin/python3
 
 def handler_app(environ, start_response):
     resp = []
