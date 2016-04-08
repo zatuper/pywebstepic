@@ -11,3 +11,6 @@ sudo /etc/init.d/gunicorn restart
 alias ll='ls -ilhao --color=auto'
 
 cd ~/web
+
+source keys.sh
+source gitinit.sh
