@@ -1,5 +1,0 @@
-2016/04/07 10:39:34 [error] 553#0: *6 open() "/home/box/web/uploads/uploads/1.img" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /uploads/1.img HTTP/1.1", host: "localhost"
-2016/04/07 10:43:05 [error] 710#0: *7 open() "/home/box/web/uploads/uploads/1.img" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /uploads/1.img HTTP/1.1", host: "localhost"
-2016/04/07 10:44:03 [error] 710#0: *8 open() "/home/box/web/uploads/uploads/2.img" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /uploads/2.img HTTP/1.1", host: "localhost"
-2016/04/07 10:49:37 [error] 710#0: *9 open() "/home/box/web/uploads/uploads/2.img" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /uploads/2.img HTTP/1.1", host: "localhost"
-2016/04/07 10:53:08 [error] 710#0: *10 open() "/home/box/web/uploads/uploads/2.img" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /uploads/2.img HTTP/1.1", host: "localhost"

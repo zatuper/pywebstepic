@@ -11,6 +11,14 @@ CONFIG = {
     ),
 }
 
+spisok=['']
+
 def application(env, start_response):
-    start_response('200 OK', [('Content-Type', 'text/html')])
-    return ["Hello!"]
+    start_response('200 OK', [('Content-Type', 'text/plain')])
+    resp = env['QUERY_STRING'].split("&")
+    print resp
+    for arg in resp:
+        spisok  = [arg+"\r\n"]
+        print spisok
+    
+    return [spisok]
