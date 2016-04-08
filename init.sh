@@ -6,7 +6,7 @@ sudo mv /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default2
 sudo mv /etc/gunicorn.d/django.example  /home/box/web/etc/django.example
 sudo mv /etc/gunicorn.d/wsgi.example  /home/box/web/etc/wsgi.example
 sudo /etc/init.d/nginx restart
-sudo ln -sf /home/box/etc/test /etc/gunicorn.d/test
+sudo ln -sf /home/box/web/etc/test /etc/gunicorn.d/test
 # sudo ln -sf /home/box/web/etc/gunicorn.conf   /etc/gunicorn.d/test
 sudo /etc/init.d/gunicorn restart
 
