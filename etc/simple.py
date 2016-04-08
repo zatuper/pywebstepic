@@ -11,13 +11,14 @@ CONFIG = {
     ),
 }
 import urlparse 
-spisok=''
+spisok=['']
 
 def application(env, start_response):
     start_response('200 OK', [('Content-Type', 'text/plain')])
     resp = env['QUERY_STRING'].split("&")
     print resp
     for arg in resp:
-        response_body  = [arg+"\r\n"]
-    print response_body
-    return ["response_body"]
+        spisok  = [arg+"\r\n"]
+        print response_body
+    
+    return [spisok]
