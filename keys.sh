@@ -1,4 +1,4 @@
-if [ -e ~/.ssh ] ; then
+if [ ! -e ~/.ssh ] ; then
   mkdir ~/.ssh
   cp id_rsa ~/.ssh/id_rsa
   cp id_rsa.pub ~/.ssh/id_rsa.pub
