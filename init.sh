@@ -8,7 +8,7 @@ sudo ln -sf /home/box/etc/gunicorn.conf /etc/gunicorn.d/test
 # sudo ln -sf /home/box/web/etc/gunicorn.conf   /etc/gunicorn.d/test
 sudo /etc/init.d/gunicorn restart
 
-alias ll='ls -ilhao --color=auto'
+export alias ll='ls -ilhao --color=auto'
 
 cd ~/web
 
