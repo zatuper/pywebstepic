@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 trap "set +x; sleep 1; set -x" DEBUG
 sudo ln -sf /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/test.conf
+sudo rm -f /etc/nginx/nginx.conf
 sudo ln  /home/box/web/etc/nginx-main /etc/nginx/nginx.conf 
 
 #sudo rm -rf /etc/nginx/sites-enabled/default
