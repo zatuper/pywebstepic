@@ -19,6 +19,6 @@ def application(env, start_response):
     print resp
     for arg in resp:
         spisok  = [arg+"\r\n"]
-        print response_body
+        print spisok
     
     return [spisok]
