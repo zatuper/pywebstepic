@@ -10,7 +10,7 @@ CONFIG = {
         'app.module',
     ),
 }
-import urlparse 
+
 spisok=['']
 
 def application(env, start_response):
