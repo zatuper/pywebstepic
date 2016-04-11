@@ -14,6 +14,7 @@ CONFIG = {
   
 
 def application(env, start_response):
+    url = []
     start_response('200 OK', [('Content-Type', 'text/plain')])
     url = env['QUERY_STRING'].split("&")
     print 'will send ', url
