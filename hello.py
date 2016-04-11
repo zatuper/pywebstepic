@@ -17,7 +17,7 @@ def application(env, start_response):
     start_response('200 OK', [('Content-Type', 'text/plain')])
     url = env['QUERY_STRING'].split("&")
     print 'will send ', url
-    values, query = parse_url_string(url)
+    # values, query = parse_url_string(url)
     response=[]
     response+=query_vars[0].split("=")[1]
     response+=query_vars[1].split("=")[1]
