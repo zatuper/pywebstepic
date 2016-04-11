@@ -16,13 +16,6 @@ def parse_url_string(url):
     car = {}
     for param in params:
         car[param.split('=')[0]] = param.split('=')[1]
-    return (params, car)
-values, query = parse_url_string('domain.com/?x=1&y=2&z=4&x=0')
-
-#
-#print values,  query,  query.keys(), query.values() 
-#for key in query.keys():
-#    print key, "=", query[key],
 return (values,  query)     
 
 def application(env, start_response):
