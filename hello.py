@@ -27,7 +27,8 @@ def application(env, start_response):
     
 def parse_url_string(url):
     print  'received', url,
-    params = url.split('?')[1].split('&')
+    # params = url.split('?')[1].split('&')
+    params = url.split('&')
     car = {}
     for param in params:
         car[param.split('=')[0]] = param.split('=')[1]
