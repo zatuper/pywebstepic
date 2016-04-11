@@ -15,7 +15,7 @@ CONFIG = {
 
 def application(env, start_response):
     start_response('200 OK', [('Content-Type', 'text/plain')])
-    url = env['QUERY_STRING']
+    url = env['QUERY_STRING'].split("&")
     print 'will send ', url
     values, query = parse_url_string(url)
     response=[]
@@ -25,11 +25,3 @@ def application(env, start_response):
     print 'parsed url values', response         
     return [response]
     
-def parse_url_string(url):
-    print  'received', url,
-    # params = url.split('?')[1].split('&')
-    params = url.split('&')
-    car = {}
-    for param in params:
-        car[param.split('=')[0]] = param.split('=')[1]
-    return (values,  query)   
