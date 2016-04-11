@@ -19,9 +19,9 @@ def application(env, start_response):
     print 'will send ', url
     # values, query = parse_url_string(url)
     response=[]
-    response+=query_vars[0].split("=")[1]
-    response+=query_vars[1].split("=")[1]
-    response+=query_vars[2].split("=")[1]
+    response+=url[0].split("=")[1]
+    response+=url[1].split("=")[1]
+    response+=url[2].split("=")[1]
     
     #for key in query.keys():
      #   a = key + "=" + query[key] + "\n"
