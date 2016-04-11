@@ -11,12 +11,7 @@ CONFIG = {
     ),
 }
 
-def parse_url_string(url):
-    params = url.split('?')[1].split('&')
-    car = {}
-    for param in params:
-        car[param.split('=')[0]] = param.split('=')[1]
-    return (values,  query)     
+  
 
 def application(env, start_response):
     start_response('200 OK', [('Content-Type', 'text/plain')])
@@ -28,4 +23,12 @@ def application(env, start_response):
         a = key + "=" + query[key] + "\n"
         response+=a
     print 'parsed url values', response         
-    return [response, 'OK']
+    return [response]
+    
+def parse_url_string(url):
+    print  'received', url,
+    params = url.split('?')[1].split('&')
+    car = {}
+    for param in params:
+        car[param.split('=')[0]] = param.split('=')[1]
+    return (values,  query)   
