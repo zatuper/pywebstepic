@@ -19,7 +19,7 @@ def application(env, start_response):
     url = env['QUERY_STRING'].split("&")
     print 'url RAW  QUERY_STRING ', url
     # values, query = parse_url_string(url)
-    response={}
+    response=[]
     for param in url:
         if (param):
            print param
