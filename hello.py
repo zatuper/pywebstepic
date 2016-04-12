@@ -34,8 +34,9 @@ def application(env, start_response):
         #for key in query.keys():
      #   a = key + "=" + query[key] + "\n"
      #   response+=a
-    #print 'parsed url values', response         
-    return [response]
+    #print 'parsed url values', response  
+    
+    return ([response])
     
     
     
