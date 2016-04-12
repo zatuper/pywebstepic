@@ -1,4 +1,4 @@
-
+from __future__ import unicode_literals
 CONFIG = {
     'mode': 'wsgi',
     'working_dir': '/path/to/my/app',
@@ -10,7 +10,7 @@ CONFIG = {
         'app.module',
     ),
 }
-from __future__ import unicode_literals
+
 
   
 
@@ -43,7 +43,7 @@ def application(env, start_response):
      #   response+=a
     #print 'parsed url values', response  
    
-    return ([response])
+    return [response]
     
     
     
