@@ -23,13 +23,14 @@ def application(env, start_response):
     for param in url:
         if (param):
            print param
-           response[param.split('=')[0]] = param.split('=')[1]+"\n"
+            # response[param.split('=')[0]] = param.split('=')[1]+"\n"
+           response+=param     
     print "now splited response ", response
 #    for key in response:
 #        if key:
 #           a=key+"="+url[key]+"\n"
 #           response+=a
-    print 'carriage return newlined ' , response
+#    print 'carriage return newlined ' , response
         #for key in query.keys():
      #   a = key + "=" + query[key] + "\n"
      #   response+=a
