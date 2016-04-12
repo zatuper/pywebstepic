@@ -22,6 +22,7 @@ def application(env, start_response):
     response=[]
     if (url):
         for i in range(0, len(url)):
+            print url[i], '\n'
             response+=url[i]
     print "now splited response ", response
 #    for key in response:
