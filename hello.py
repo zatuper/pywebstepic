@@ -1,6 +1,6 @@
 from io import StringIO
 CONFIG = {
-    'mode': 'wsgi',
+    # 'mode': 'wsgi',
     'working_dir': '/path/to/my/app',
     'python': '/usr/bin/python',
     'args': (
@@ -17,11 +17,8 @@ CONFIG = {
 def application(env, start_response):
     stdout = StringIO()
     url = {}
-   
-   # start_response('200 OK', [('Content-Type', 'text/plain')])
     url = env['QUERY_STRING'].split("&")
-    print 'url RAW  QUERY_STRING ', url
-    # values, query = parse_url_string(url)
+    # print 'url RAW  QUERY_STRING ', url
     a={}
     response=[]
     status = '200 OK'
@@ -30,21 +27,9 @@ def application(env, start_response):
     start_response(status, response_headers)
     if (url):
         for i in range(0, len(url)):
-            print (url[i], '\n', file=stdout)
+            print (url[i], '\r', '\n')
             a.update({i:url[i]})
             response+= str(a[i]) + "\r\n"
-    print "concatenated string for web response ", response
-#    for key in response:
-#        if key:
-#           a=key+"="+url[key]+"\n"
-#           response+=a
-#    print 'carriage return newlined ' , response
-        #for key in query.keys():
-     #   a = key + "=" + query[key] + "\n"
-     #   response+=a
-    #print 'parsed url values', response  
-    print(file=stdout)
-    return [stdout.getvalue().encode("utf-8")]
-    
-    
+    # print "concatenated string for web response ", response
+    return [resonse.encode("utf-8")]
     
