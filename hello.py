@@ -17,11 +17,14 @@ def application(env, start_response):
     url = []
     start_response('200 OK', [('Content-Type', 'text/plain')])
     url = env['QUERY_STRING'].split("&")
-    print 'will send ', url
+    print 'url RAW  QUERY_STRING ', url
     # values, query = parse_url_string(url)
     response=[]
-    response+=url[0]+"\n"
-    print response
+    for key in url:
+        if key:
+           a=key+"="+url[key]+"\n"
+           response+=a
+    print 'concatenated' response
         #for key in query.keys():
      #   a = key + "=" + query[key] + "\n"
      #   response+=a
