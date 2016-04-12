@@ -21,8 +21,8 @@ def application(env, start_response):
     # values, query = parse_url_string(url)
     response=[]
     if (url):
-        for var in int(len(url)):
-            response+=url[var]
+        for i in range(0, len(url)):
+            response+=url[i]
     print "now splited response ", response
 #    for key in response:
 #        if key:
