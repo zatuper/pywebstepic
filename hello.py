@@ -24,7 +24,10 @@ def application(env, start_response):
         if (param):
            print param
             # response[param.split('=')[0]] = param.split('=')[1]+"\n"
-           print url[param]     
+           print url[0]
+           print url[1]
+           print url[2]
+           print url[3]
     print "now splited response ", response
 #    for key in response:
 #        if key:
