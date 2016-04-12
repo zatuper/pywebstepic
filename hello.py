@@ -41,13 +41,8 @@ def application(env, start_response):
      #   a = key + "=" + query[key] + "\n"
      #   response+=a
     #print 'parsed url values', response  
-    response_headers = [
-        ('Content-type','text/plain'),
-        ('Content-Length', str(len(data)))
-    ]
-    start_response(status, response_headers)
-    return iter([data])
-    return ([response])
+   
+    return iter([response])
     
     
     
