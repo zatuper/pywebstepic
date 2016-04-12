@@ -1,4 +1,4 @@
-
+from io import StringIO
 CONFIG = {
     'mode': 'wsgi',
     'working_dir': '/path/to/my/app',
@@ -15,6 +15,7 @@ CONFIG = {
   
 
 def application(env, start_response):
+    stdout = StringIO()
     url = {}
    
    # start_response('200 OK', [('Content-Type', 'text/plain')])
@@ -25,11 +26,11 @@ def application(env, start_response):
     response=[]
     status = '200 OK'
     response_headers = [
-        ('Content-type','text/plain')]
+        ('Content-type','text/plain', 'charset=utf-8')]
     start_response(status, response_headers)
     if (url):
         for i in range(0, len(url)):
-            print url[i], '\n'
+            print (url[i], '\n', file=stdout)
             a.update({i:url[i]})
             response+= str(a[i]) + "\r\n"
     print "concatenated string for web response ", response
@@ -42,8 +43,8 @@ def application(env, start_response):
      #   a = key + "=" + query[key] + "\n"
      #   response+=a
     #print 'parsed url values', response  
-   
-    return [response]
+    print(file=stdout)
+    return [stdout.getvalue().encode("utf-8")]
     
     
     
