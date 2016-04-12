@@ -20,14 +20,9 @@ def application(env, start_response):
     print 'url RAW  QUERY_STRING ', url
     # values, query = parse_url_string(url)
     response=[]
-    for param in url:
-        if (param):
-           print param
-            # response[param.split('=')[0]] = param.split('=')[1]+"\n"
-           print url[0]
-           print url[1]
-           print url[2]
-           print url[3]
+    if (url):
+        for var in len(url):
+            response+=url[var]
     print "now splited response ", response
 #    for key in response:
 #        if key:
