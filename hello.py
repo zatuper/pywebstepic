@@ -24,7 +24,7 @@ def application(env, start_response):
         if key:
            a=key+"="+url[key]+"\n"
            response+=a
-    print 'concatenated' response
+    print 'concatenated ' , response
         #for key in query.keys():
      #   a = key + "=" + query[key] + "\n"
      #   response+=a
