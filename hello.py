@@ -20,18 +20,18 @@ def application(env, start_response):
     url = env['QUERY_STRING'].split("&")
     print 'url RAW  QUERY_STRING ', url
     # values, query = parse_url_string(url)
-    response={}
+    a={}
+    response=[]
     status = '200 OK'
     response_headers = [
-        ('Content-type','text/plain'),
-        ('Content-Length', str(len(url)))]
+        ('Content-type','text/plain')]
     start_response(status, response_headers)
     if (url):
         for i in range(0, len(url)):
             print url[i], '\n'
-            response.update({i:url[i]})
-            
-    print "now splited response ", response
+            a.update({i:url[i]})
+            response+= str(a[i]) + "\r\n"
+    print "concatenated string for web response ", response
 #    for key in response:
 #        if key:
 #           a=key+"="+url[key]+"\n"
@@ -42,7 +42,7 @@ def application(env, start_response):
      #   response+=a
     #print 'parsed url values', response  
    
-    return iter([response])
+    return ([response])
     
     
     
