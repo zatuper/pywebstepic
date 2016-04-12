@@ -16,3 +16,5 @@ sleep 2
 #loook for more complex way to do the same at http://pastebin.com/88rpiTiF
 ssh-add ~/.ssh/id_rsa
 ssh-add -l  
+cd web
+
