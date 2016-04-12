@@ -14,14 +14,14 @@ CONFIG = {
   
 
 def application(env, start_response):
-    url = []
+    url = {}
     start_response('200 OK', [('Content-Type', 'text/plain')])
     url = env['QUERY_STRING'].split("&")
     print 'url RAW  QUERY_STRING ', url
     # values, query = parse_url_string(url)
-    response=[]
+    response={}
     for param in url:
-        if int(param):
+        if (param):
            print param
            response[param.split('=')[0]] = param.split('=')[1]+"\n"
     print "now splited response ", response
