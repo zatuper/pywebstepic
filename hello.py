@@ -21,7 +21,8 @@ def application(env, start_response):
     # values, query = parse_url_string(url)
     response=[]
     for param in url:
-        response[param.split('=')[0]] = param.split('=')[1]+"\n"
+        if param
+           response[param.split('=')[0]] = param.split('=')[1]+"\n"
     print "now splited response ", response
 #    for key in response:
 #        if key:
