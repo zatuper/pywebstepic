@@ -20,11 +20,14 @@ def application(env, start_response):
     print 'url RAW  QUERY_STRING ', url
     # values, query = parse_url_string(url)
     response=[]
-    for key in url:
-        if key:
-           a=key+"="+url[key]+"\n"
-           response+=a
-    print 'concatenated ' , response
+    for param in url:
+        response[param.split('=')[0]] = param.split('=')[1]+"\n"
+    print "now splited response ", response
+#    for key in response:
+#        if key:
+#           a=key+"="+url[key]+"\n"
+#           response+=a
+    print 'carriage return newlined ' , response
         #for key in query.keys():
      #   a = key + "=" + query[key] + "\n"
      #   response+=a
