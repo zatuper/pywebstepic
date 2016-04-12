@@ -22,6 +22,7 @@ def application(env, start_response):
     response=[]
     for param in url:
         if param
+           print param
            response[param.split('=')[0]] = param.split('=')[1]+"\n"
     print "now splited response ", response
 #    for key in response:
