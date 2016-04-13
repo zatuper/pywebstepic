@@ -16,4 +16,4 @@ def application(env, start_response):
     start_response('200 OK', [('Content-Type', 'text/plain')])
     # url = str(env[QUERY_STRING])+" test"
     url = str(env['QUERY_STRING'].split("&"))
-    return ["url"]
+    return [url]
