@@ -12,5 +12,7 @@ CONFIG = {
 }
 
 def application(env, start_response):
-    start_response('200 OK', [('Content-Type', 'text/html')])
-    return ["Hello!"]
+  #  url = []
+    start_response('200 OK', [('Content-Type', 'text/plain')])
+    url = str(env[QUERY_STRING])+" test"
+    return ["url"]
