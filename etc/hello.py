@@ -14,7 +14,9 @@ CONFIG = {
 def application(env, start_response):
   #  url = []
     start_response('200 OK', [('Content-Type', 'text/plain')])
-    url = '\r\n'.join([(env['QUERY_STRING'])+"&z=0"]) 
-    #z=0 just for test when no url query
+    url = (env['QUERY_STRING'])
+    url += "&z=0" #z=0 just for test when no url query
+    url = url.split('&')
+    url = '\r\n'.join([url]) 
     #url = '\r\n'.join([(env['QUERY_STRING'].split("&"))])
     return [url]
