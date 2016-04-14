@@ -14,22 +14,6 @@ CONFIG = {
   
 
 def application(env, start_response):
-  #  url = {}
-  #  url = env['QUERY_STRING'].split("&")
-  #  # print 'url RAW  QUERY_STRING ', url
-  #  a={}
- #   response=[]
- #   status = '200 OK'
- #   response_headers = [
- #       ('Content-type','text/plain')]
-#    start_response(status, response_headers)
-   # if (url):
-   #     for i in range(0, len(url)):
-   #         print (url[i], '\r', '\n')
-  #          a.update({i:url[i]})
- #           response+= str(a[i]) + "\r\n"
-    # print "concatenated string for web response ", response
-#    return [response.encode("utf-8")]
     start_response('200 OK', [('Content-Type', 'text/plain')])
     url = env['QUERY_STRING']
     url = url.split('&')
@@ -38,8 +22,8 @@ def application(env, start_response):
         if (e):
            print 'app: element', e
            datastr=str(e)
-           datastr='\n'.join(map(str, e)).replace("'", '').replace("[",'').replace("]",'')
-        resp=''.join(datastr)
-        print 'app - resp', resp 
+           resp+='\n'.join(datastr)
+           #datastr='\n'.join(map(str, e)).replace("'", '').replace("[",'').replace("]",'')
+    print 'app - resp', resp 
     return resp
     
