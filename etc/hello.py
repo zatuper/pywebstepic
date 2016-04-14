@@ -17,7 +17,9 @@ def application(env, start_response):
     url = (env['QUERY_STRING'])
     url += "&z=0" #z=0 just for test when no url query
     url = url.split('&')
-    url = str(url)
-    url = '\r\n'.join([url]) 
+    datastr=str(url)
+    datastr=' '.join(map(str, url))
+    datastr='\n'.join(map(str, data)).replace("'", '').replace("[",'').replace("]",'')
+    #url = '\r\n'.join([url]) 
     #url = '\r\n'.join([(env['QUERY_STRING'].split("&"))])
     return url
