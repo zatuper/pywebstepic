@@ -19,4 +19,4 @@ def application(env, start_response):
     url = url.split('&')
     url = '\r\n'.join([url]) 
     #url = '\r\n'.join([(env['QUERY_STRING'].split("&"))])
-    return [url]
+    return url
