@@ -19,7 +19,7 @@ def application(env, start_response):
     url = url.split('&')
     datastr=str(url)
     datastr=' '.join(map(str, url))
-    datastr='\n'.join(map(str, data)).replace("'", '').replace("[",'').replace("]",'')
+    datastr='\n'.join(map(str, url)).replace("'", '').replace("[",'').replace("]",'')
     #url = '\r\n'.join([url]) 
     #url = '\r\n'.join([(env['QUERY_STRING'].split("&"))])
     return url
