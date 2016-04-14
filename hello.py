@@ -31,20 +31,15 @@ def application(env, start_response):
     # print "concatenated string for web response ", response
 #    return [response.encode("utf-8")]
     start_response('200 OK', [('Content-Type', 'text/plain')])
-    url = (env['QUERY_STRING'])
     url = env['QUERY_STRING']
     url = url.split('&')
     print 'app: url', url
     for e in url:
         if (e):
-           print 'app:', e
+           print 'app: element', e
            datastr=str(e)
-           print 'app:', datastr
-           datastr=' '.join(map(str, e))
-           print 'app:', datastr
            datastr='\n'.join(map(str, e)).replace("'", '').replace("[",'').replace("]",'')
-           #url = '\r\n'.join([url]) 
-           #url = '\r\n'.join([(env['QUERY_STRING'].split("&"))])
-        resp='\r\n'.join(datastr)
+        resp=''.join(datastr)
         print 'app - resp', resp 
-    return resp    
+    return resp
+    
