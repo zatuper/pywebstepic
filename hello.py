@@ -17,6 +17,7 @@ def application(env, start_response):
     start_response('200 OK', [('Content-Type', 'text/plain')])
     url = env['QUERY_STRING']
     url = url.split('&')
+    resp=''
     print 'app: url', url
     for e in url:
         if (e):
