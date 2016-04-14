@@ -31,3 +31,7 @@ b=3
 1) http://docs.gunicorn.org/en/latest/custom.html
 2) http://docs.gunicorn.org/en/latest/settings.html#settings
 3) http://hlabs.org/development/python/wsgi.html#id3
+
+## Solution
+
+1) http://pythonfiddle.com/dashboard/ быстро проверить работоспособность кода в питоне типа итерации по спискам  и тп. задачи
