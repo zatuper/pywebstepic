@@ -20,10 +20,11 @@ def application(env, start_response):
     resp=''
     print 'app: url', url
     for e in url:
-        if (e):
+        if e:
            print 'app: element', e
            resp+='\n'+(str([e])).replace("'", '').replace("[",'').replace("]",'')
            #datastr='\n'.join(map(str, e)).replace("'", '').replace("[",'').replace("]",'')
     print 'app - resp', resp 
+    
     return resp
     
