@@ -22,7 +22,7 @@ def application(env, start_response):
     for e in url:
         if (e):
            print 'app: element', e
-           resp+='\n'.join(e)
+           resp+='\n'+str([e])
            #datastr='\n'.join(map(str, e)).replace("'", '').replace("[",'').replace("]",'')
     print 'app - resp', resp 
     return resp
