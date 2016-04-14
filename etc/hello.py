@@ -18,9 +18,8 @@ def application(env, start_response):
     url += "&z=0" #z=0 just for test when no url query
     url = url.split('&')
     print 'app:', url
-    
     datastr=str(url)
-    print 'app:', url
+    print 'app:', datastr
     datastr=' '.join(map(str, url))
     print 'app:', datastr
     datastr='\n'.join(map(str, url)).replace("'", '').replace("[",'').replace("]",'')
