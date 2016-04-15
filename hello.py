@@ -1,11 +1,15 @@
 def application(env, start_response):
-    url = []
+    #url = []
     start_response('200 OK', [('Content-Type', 'text/plain')])
+    
+    url=list()
     url = (env['QUERY_STRING'])
     #url += "&z=0" #z=0 just for test when no url query
     url = url.split('&')
     print 'app:', url
-    datastr=str(url)
+    
+    datastr=str('x=1\nx=2\ny=3\ny=')
+    '''
     print 'app:', datastr
     datastr=' '.join(map(str, url))
     print 'app:', datastr
@@ -18,5 +22,5 @@ def application(env, start_response):
     #       print 'app: element', e
     #       resp+='\n'+(str([e])).replace("'", '').replace("[",'').replace("]",'')
     #       #datastr='\n'.join(map(str, e)).replace("'", '').replace("[",'').replace("]",'')
-    #print 'app - resp', resp 
+    #print 'app - resp', resp '''
     return datastr
