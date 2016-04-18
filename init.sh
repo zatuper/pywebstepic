@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 trap "set +x; sleep 1; set -x" DEBUG
-sudo /usr/bin/apt-get -qy update > /dev/null
-sudo /usr/bin/apt-get -qy dist-upgrade > /dev/null
+#sudo /usr/bin/apt-get -qy update > /dev/null
+#sudo /usr/bin/apt-get -qy dist-upgrade > /dev/null
 #delete unwanted default configs
 sudo rm -f /etc/nginx/nginx.conf
 sudo rm -f /etc/nginx/sites-enabled/default
@@ -20,12 +20,12 @@ sudo /etc/init.d/gunicorn restart
 #  load keys
 cd ~/web
 cd ~
-echo 'export WORKON_HOME="$HOME/.virtualenvs"' >> ~/.bashrc
-echo '. /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
-echo 'export alias ls="ls -h --color"' >> ~/.bashrc
+sudo echo 'export WORKON_HOME="$HOME/.virtualenvs"' >> ~/.bashrc
+sudo echo './usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
+sudo echo 'export alias ls="ls -h --color"' >> ~/.bashrc
 # The ubiquitous 'll': directories first, with alphanumeric sorting:
-alias 'll="ls -lv --group-directories-first"1' >> ~/.bashrc
-alias 'tree="tree -Csuh"' >> ~/.bashrc    #  Nice alternative to 'recursive ls' ...
+sudo alias 'export ll="ls -lv --group-directories-first"1' >> ~/.bashrc
+sudoalias 'export tree="tree -Csuh"' >> ~/.bashrc    #  Nice alternative to 'recursive ls' ...
 #alias lx='ls -lXB'         #  Sort by extension.
 #alias lk='ls -lSr'         #  Sort by size, biggest last.
 #alias lt='ls -ltr'         #  Sort by date, most recent last.
