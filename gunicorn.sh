@@ -22,7 +22,8 @@ export PYTHONPATH=$DJANGODIR:$PYTHONPATH
 
 # Start your Django Unicorn
 # Programs meant to be run under supervisor should not daemonize themselves (do not use --daemon)
-exec gunicorn ${DJANGO_WSGI_MODULE}:application \ # as no virtualnv no need of /var/www/test/venv/bin/
+# as no virtualnv no need of /var/www/test/venv/bin/
+exec gunicorn ${DJANGO_WSGI_MODULE}:application \ 
   --name $NAME \
   --workers $NUM_WORKERS \
   --user $USER \
