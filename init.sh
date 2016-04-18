@@ -19,7 +19,24 @@ sudo /etc/init.d/gunicorn restart
 
 #  load keys
 cd ~/web
-#source ./bashrc
+cd ~
+echo 'export WORKON_HOME="$HOME/.virtualenvs"' >> ~/.bashrc
+echo '. /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
+echo 'export alias ls="ls -h --color"' >> ~/.bashrc
+# The ubiquitous 'll': directories first, with alphanumeric sorting:
+alias 'll="ls -lv --group-directories-first"1' >> ~/.bashrc
+alias 'tree="tree -Csuh"' >> ~/.bashrc    #  Nice alternative to 'recursive ls' ...
+#alias lx='ls -lXB'         #  Sort by extension.
+#alias lk='ls -lSr'         #  Sort by size, biggest last.
+#alias lt='ls -ltr'         #  Sort by date, most recent last.
+#alias lc='ls -ltcr'        #  Sort by/show change time,most recent last.
+#alias lu='ls -ltur'        #  Sort by/show access time,most recent last.
+#alias lm='ll |more'        #  Pipe through 'more'
+#alias lr='ll -R'           #  Recursive ls.
+#alias la='ll -A'           #  Show hidden files.
+
+source ./bashrc
+cd ~/web
 source keys.sh
 cd ~/web
 bash initgit.sh
