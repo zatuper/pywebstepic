@@ -25,3 +25,4 @@ export PYTHONPATH=$DJANGODIR:$PYTHONPATH
 # as no virtualnv no need of /var/www/test/venv/bin/
 exec gunicorn ${DJANGO_WSGI_MODULE}:application --name $NAME --workers $NUM_WORKERS --user $USER --bind='0.0.0.0:8000'
 #no socket unix:$SOCKFILE
+#
