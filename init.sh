@@ -1,21 +1,23 @@
 #!/usr/bin/env bash
 trap "set +x; sleep 1; set -x" DEBUG
-sudo ln -sf /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/test.conf
-sudo rm -f /etc/nginx/nginx.conf 
-sudo ln  /home/box/web/etc/nginx-main /etc/nginx/nginx.conf 
+#delete unwanted default configs
+sudo rm -f /etc/nginx/nginx.conf
+sudo rm -f /etc/nginx/sites-enabled/default
+sudo rm -f /etc/gunicorn.d/django.example
+sudo rm -f /etc/gunicorn.d/wsgi.example
+sudo rm -f /etc/gunicorn.d/test
 
-#sudo rm -rf /etc/nginx/sites-enabled/default
-sudo rm -f /etc/nginx/sites-enabled/default   
-sudo rm -f /etc/gunicorn.d/django.example 
-sudo rm -f  /etc/gunicorn.d/wsgi.example  
-sudo rm /etc/gunicorn.d/test
+#rock our custom configs  to work
+sudo ln -sf /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/test.conf
+sudo ln -sf /home/box/web/etc/nginx-main /etc/nginx/nginx.conf
 sudo ln -sf /home/box/web/etc/gunicorn.conf /etc/gunicorn.d/test
 sudo /etc/init.d/nginx restart
 # sudo ln -sf /home/box/web/etc/gunicorn.conf   /etc/gunicorn.d/test
 sudo /etc/init.d/gunicorn restart
 
-# alias in bashrc
+#  load keys
 cd ~/web
-
+#source ./bashrc
 source keys.sh
-source initgit.sh
+cd ~/web
+bash initgit.sh
