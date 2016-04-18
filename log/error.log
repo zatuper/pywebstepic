@@ -1,0 +1,2 @@
+2016/04/18 11:05:14 [error] 432#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "HEAD / HTTP/1.1", upstream: "http://127.0.0.1:8000/", host: "localhost"
+2016/04/18 11:05:33 [error] 432#0: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8000/", host: "localhost"

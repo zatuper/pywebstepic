@@ -1,4 +1,4 @@
-#unusual core.worktree
+#clean up after unusual core.worktree trick 
 #home/box/
 .bash_logout                                                         
 .bashrc                                                              
@@ -7,6 +7,9 @@
 .viminfo                                                             
 
 
+#want no logs!
+log/
+*
 # Byte-compiled / optimized / DLL files
          
 
