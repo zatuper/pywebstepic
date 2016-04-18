@@ -1,11 +1,17 @@
+'/usr/lib/python2.7'
 CONFIG = {
-    'mode': 'wsgi',
-    'working_dir': '/home/box/web',
-    'python': '/usr/bin/python3',
+    'mode': 'django',
+    'user': 'box',
+    'group': 'www-data',
+    'working_dir': '/home/box/web/ask',
+
+    'environment': {
+        'PYTHONPATH': '/usr/lib/python3.4'
+    },
+
     'args': (
-        '--bind=0.0.0.0:8080',
-        '--workers=16',
-        '--timeout=60',
-        'app.module',
+        '--bind=127.0.0.1:8000',
+        '--workers=2',
+        'conf.settings',
     ),
 }
