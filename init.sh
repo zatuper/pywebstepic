@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 trap "set +x; sleep 1; set -x" DEBUG
+/usr/bin/apt-get -qy update > /dev/null
+/usr/bin/apt-get -qy dist-upgrade > /dev/null
 #delete unwanted default configs
 sudo rm -f /etc/nginx/nginx.conf
 sudo rm -f /etc/nginx/sites-enabled/default
