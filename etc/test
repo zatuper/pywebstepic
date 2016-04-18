@@ -1,4 +1,3 @@
-'/usr/lib/python2.7'
 CONFIG = {
     'mode': 'django',
     'user': 'box',
