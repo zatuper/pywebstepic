@@ -20,11 +20,11 @@ sudo /etc/init.d/gunicorn restart
 #  load keys
 cd ~/web
 cd ~
-sudo echo 'export WORKON_HOME="$HOME/.virtualenvs"' >> ~/.bashrc
-sudo echo './usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
-sudo echo 'export alias ls="ls -h --color"' >> ~/.bashrc
+sudo echo 'export WORKON_HOME="$HOME/.virtualenvs"' >> /home/box/.bashrc
+sudo echo './usr/local/bin/virtualenvwrapper.sh' >> /home/box/.bashrc
+sudo echo 'export alias ls="ls -h --color"' >> /home/box/.bashrc
 # The ubiquitous 'll': directories first, with alphanumeric sorting:
-sudo alias 'export ll="ls -lv --group-directories-first"1' >> ~/.bashrc
+sudo alias 'export ll="ls -lv --group-directories-first"1' >> /home/box/.bashrc
 sudoalias 'export tree="tree -Csuh"' >> ~/.bashrc    #  Nice alternative to 'recursive ls' ...
 #alias lx='ls -lXB'         #  Sort by extension.
 #alias lk='ls -lSr'         #  Sort by size, biggest last.
