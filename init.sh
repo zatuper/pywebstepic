@@ -25,7 +25,7 @@ sudo echo './usr/local/bin/virtualenvwrapper.sh' >> /home/box/.bashrc
 sudo echo 'export alias ls="ls -h --color"' >> /home/box/.bashrc
 # The ubiquitous 'll': directories first, with alphanumeric sorting:
 sudo alias 'export ll="ls -lv --group-directories-first"1' >> /home/box/.bashrc
-sudoalias 'export tree="tree -Csuh"' >> ~/.bashrc    #  Nice alternative to 'recursive ls' ...
+sudoalias 'export tree="tree -Csuh"' >> /home/box/.bash_alias    #  Nice alternative to 'recursive ls' ...
 #alias lx='ls -lXB'         #  Sort by extension.
 #alias lk='ls -lSr'         #  Sort by size, biggest last.
 #alias lt='ls -ltr'         #  Sort by date, most recent last.
@@ -35,7 +35,8 @@ sudoalias 'export tree="tree -Csuh"' >> ~/.bashrc    #  Nice alternative to 'rec
 #alias lr='ll -R'           #  Recursive ls.
 #alias la='ll -A'           #  Show hidden files.
 
-source ./bashrc
+source .bashrc
+source .bash_alias
 cd ~/web
 source keys.sh
 cd ~/web
