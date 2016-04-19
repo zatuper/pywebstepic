@@ -6,7 +6,7 @@ DJANGODIR=/home/box/web/ask/ask             # Django project directory (*)
 # GROUP=box                                     # the group to run as (*)
 NUM_WORKERS=1                                     # how many worker processes should Gunicorn spawn (*)
 DJANGO_SETTINGS_MODULE=/home/box/web/ask/ask/settings             # which settings file should Django use (*)
-DJANGO_WSGI_MODULE=/home/box/web/ask/ask                     # WSGI module name (*)
+DJANGO_WSGI_MODULE=/home/box/web/ask/ask/wsgi                     # WSGI module name (*)
 
 echo "Starting $NAME as `whoami`"
 
