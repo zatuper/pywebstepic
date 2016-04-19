@@ -1,12 +1,12 @@
 #!/bin/bash
-NAME="ask"                              #Name of the application (*)
-DJANGODIR=/home/box/web/ask             # Django project directory (*)
+NAME=ask                              #Name of the application (*)
+DJANGODIR=/home/box/web/ask/ask             # Django project directory (*)
 # SOCKFILE=/var/www/test/run/gunicorn.sock        # NO ! we not will communicate using this unix socket (*)
-USER=www-data                                        # the user to run as (*)
-GROUP=box                                     # the group to run as (*)
+  USER=box                                        # the user to run as (*)
+# GROUP=box                                     # the group to run as (*)
 NUM_WORKERS=1                                     # how many worker processes should Gunicorn spawn (*)
-DJANGO_SETTINGS_MODULE='/home/box/web/ask/ask/settings'             # which settings file should Django use (*)
-DJANGO_WSGI_MODULE='/home/box/web/ask/ask/ask'                     # WSGI module name (*)
+DJANGO_SETTINGS_MODULE=/home/box/web/ask/ask/settings             # which settings file should Django use (*)
+DJANGO_WSGI_MODULE=/home/box/web/ask/ask                     # WSGI module name (*)
 
 echo "Starting $NAME as `whoami`"
 
