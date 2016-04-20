@@ -2,6 +2,9 @@
 trap "set +x; sleep 1; set -x" DEBUG
 #sudo /usr/bin/apt-get -qy update > /dev/null
 #sudo /usr/bin/apt-get -qy dist-upgrade > /dev/null
+## may be useful # sudo pip install -upgrade gunicorn > /dev/null
+     # pip install -upgrade gunicorn > /dev/null
+
 #delete unwanted default configs
 sudo rm -f /etc/nginx/nginx.conf
 sudo rm -f /etc/nginx/sites-enabled/default
