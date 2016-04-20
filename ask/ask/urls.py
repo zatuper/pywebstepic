@@ -1,12 +1,10 @@
+# -*- coding: utf-8 -*-
 from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
 admin.autodiscover()
-# from . import views
 
-urlpatterns = patterns('',
-    # Examples:
-    url(r'^$', 'ask.views.home', name='home'),
+urlpatterns = [
+    url(r'^$',     include('qa.urls')),
     url(r'^blog/', include('blog.urls')),
-    url(r'^(?P<question>\d+)', include('qa.urls'))
-    )
+]
