@@ -12,13 +12,13 @@ from django.http import HttpResponse
 def home(request):
     return HttpResponse('Hello World')
 def login(request):
-    return HttpResponse('')
+    return HttpResponse('OK')
 def signup(request):
-    return HttpResponse('')
+    return HttpResponse('OK')
 def ask(request):
-    return HttpResponse('')
+    return HttpResponse('OK')
 def popular(request):
-    return HttpResponse('')
+    return HttpResponse('OK')
 def new(request):
-    return HttpResponse('')
+    return HttpResponse('OK')
   
