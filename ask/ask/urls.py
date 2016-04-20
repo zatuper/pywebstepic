@@ -16,7 +16,7 @@ urlpatterns = [
     url(r'^popular/', views.popular, name='popular'),
     url(r'^new/', views.new, name='new'),
     url(r'^$',     include('qa.urls')),
-    url(r'^question/([0-9]{4})/$', include('qa.urls')),
+    url(r'^question/([0-9]{3})/$', include('qa.urls')),
     url(r'^blog/', include('blog.urls')),
  
 ]
