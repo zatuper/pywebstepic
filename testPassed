@@ -1,0 +1,548 @@
+
+[2016-04-20 13:05:00 +0000] [43] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f6cea9ab410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f6cea9ab140>
+  pre_fork: <function pre_fork at 0x7f6cea9ab2a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/box/web/log/access-gunicorn.log
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 1
+  proc_name: None
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f6cea99ef50>
+  pre_exec: <function pre_exec at 0x7f6cea9ab9b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f6cea9ab578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f6cea9ae0c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f6cea9abb18>
+  post_request: <function post_request at 0x7f6cea9abc08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f6cea9ab6e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f6cea9abd70>
+  chdir: /home/box/web/ask
+  paste: None
+  default_proc_name: ask.wsgi
+  errorlog: /home/box/web/log/error-gunicorn.log
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f6cea99ede8>
+  worker_abort: <function worker_abort at 0x7f6cea9ab848>
+  bind: ['0.0.0.0:8000']
+  raw_env: ['DJANGO_SETTINGS_MODULE=ask.settings']
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f6cea9abed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-20 13:05:00 +0000] [43] [INFO] Starting gunicorn 19.4.5
+[2016-04-20 13:05:00 +0000] [43] [DEBUG] Arbiter booted
+[2016-04-20 13:05:00 +0000] [43] [INFO] Listening at: http://0.0.0.0:8000 (43)
+[2016-04-20 13:05:00 +0000] [43] [INFO] Using worker: sync
+[2016-04-20 13:05:00 +0000] [43] [DEBUG] 1 workers
+[2016-04-20 13:05:00 +0000] [48] [INFO] Booting worker with pid: 48
+[2016-04-20 13:06:14 +0000] [48] [DEBUG] GET /
+[2016-04-20 13:06:14 +0000] [48] [DEBUG] GET /
+[2016-04-20 13:08:18 +0000] [48] [DEBUG] GET /
+[2016-04-20 13:11:26 +0000] [43] [INFO] Handling signal: int
+[2016-04-20 13:11:26 +0000] [48] [INFO] Worker exiting (pid: 48)
+[2016-04-20 13:11:27 +0000] [43] [INFO] Shutting down: Master
+[2016-04-20 13:12:10 +0000] [399] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fc74d33c410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fc74d33c140>
+  pre_fork: <function pre_fork at 0x7fc74d33c2a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/box/web/log/access-gunicorn.log
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 1
+  proc_name: None
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fc74d32ff50>
+  pre_exec: <function pre_exec at 0x7fc74d33c9b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7fc74d33c578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7fc74d33f0c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fc74d33cb18>
+  post_request: <function post_request at 0x7fc74d33cc08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fc74d33c6e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7fc74d33cd70>
+  chdir: /home/box/web/ask
+  paste: None
+  default_proc_name: ask.wsgi
+  errorlog: /home/box/web/log/error-gunicorn.log
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7fc74d32fde8>
+  worker_abort: <function worker_abort at 0x7fc74d33c848>
+  bind: ['0.0.0.0:8000']
+  raw_env: ['DJANGO_SETTINGS_MODULE=ask.settings']
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fc74d33ced8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-20 13:12:10 +0000] [399] [INFO] Starting gunicorn 19.4.5
+[2016-04-20 13:12:10 +0000] [399] [DEBUG] Arbiter booted
+[2016-04-20 13:12:10 +0000] [399] [INFO] Listening at: http://0.0.0.0:8000 (399)
+[2016-04-20 13:12:10 +0000] [399] [INFO] Using worker: sync
+[2016-04-20 13:12:10 +0000] [404] [INFO] Booting worker with pid: 404
+[2016-04-20 13:12:10 +0000] [399] [DEBUG] 1 workers
+[2016-04-20 13:12:14 +0000] [404] [DEBUG] GET /
+[2016-04-20 13:14:19 +0000] [404] [DEBUG] GET /
+[2016-04-20 13:14:53 +0000] [404] [DEBUG] GET /
+[2016-04-20 13:14:53 +0000] [404] [DEBUG] GET /
+[2016-04-20 13:14:53 +0000] [404] [DEBUG] GET /login/
+[2016-04-20 13:15:11 +0000] [404] [DEBUG] GET /login/
+[2016-04-20 13:18:50 +0000] [404] [DEBUG] GET /login/
+[2016-04-20 13:21:15 +0000] [399] [INFO] Handling signal: int
+[2016-04-20 13:21:15 +0000] [404] [INFO] Worker exiting (pid: 404)
+[2016-04-20 13:21:15 +0000] [399] [INFO] Shutting down: Master
+[2016-04-20 13:21:41 +0000] [563] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f45b31bd410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f45b31bd140>
+  pre_fork: <function pre_fork at 0x7f45b31bd2a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/box/web/log/access-gunicorn.log
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 1
+  proc_name: None
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f45b31b0f50>
+  pre_exec: <function pre_exec at 0x7f45b31bd9b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f45b31bd578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f45b31c00c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f45b31bdb18>
+  post_request: <function post_request at 0x7f45b31bdc08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f45b31bd6e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f45b31bdd70>
+  chdir: /home/box/web/ask
+  paste: None
+  default_proc_name: ask.wsgi
+  errorlog: /home/box/web/log/error-gunicorn.log
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f45b31b0de8>
+  worker_abort: <function worker_abort at 0x7f45b31bd848>
+  bind: ['0.0.0.0:8000']
+  raw_env: ['DJANGO_SETTINGS_MODULE=ask.settings']
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f45b31bded8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-20 13:21:41 +0000] [563] [INFO] Starting gunicorn 19.4.5
+[2016-04-20 13:21:41 +0000] [563] [DEBUG] Arbiter booted
+[2016-04-20 13:21:41 +0000] [563] [INFO] Listening at: http://0.0.0.0:8000 (563)
+[2016-04-20 13:21:41 +0000] [563] [INFO] Using worker: sync
+[2016-04-20 13:21:41 +0000] [568] [INFO] Booting worker with pid: 568
+[2016-04-20 13:21:41 +0000] [563] [DEBUG] 1 workers
+[2016-04-20 13:21:57 +0000] [568] [DEBUG] GET /login/
+[2016-04-20 13:22:13 +0000] [568] [DEBUG] GET /
+[2016-04-20 13:22:13 +0000] [568] [DEBUG] GET /
+[2016-04-20 13:22:13 +0000] [568] [DEBUG] GET /login/
+[2016-04-20 13:23:45 +0000] [568] [DEBUG] GET /login/
+[2016-04-20 13:24:00 +0000] [563] [INFO] Handling signal: int
+[2016-04-20 13:24:00 +0000] [568] [INFO] Worker exiting (pid: 568)
+[2016-04-20 13:24:00 +0000] [563] [INFO] Shutting down: Master
+[2016-04-20 13:24:19 +0000] [684] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f8faff98410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f8faff98140>
+  pre_fork: <function pre_fork at 0x7f8faff982a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/box/web/log/access-gunicorn.log
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 1
+  proc_name: None
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f8faff8bf50>
+  pre_exec: <function pre_exec at 0x7f8faff989b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f8faff98578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f8faff9b0c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f8faff98b18>
+  post_request: <function post_request at 0x7f8faff98c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f8faff986e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f8faff98d70>
+  chdir: /home/box/web/ask
+  paste: None
+  default_proc_name: ask.wsgi
+  errorlog: /home/box/web/log/error-gunicorn.log
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f8faff8bde8>
+  worker_abort: <function worker_abort at 0x7f8faff98848>
+  bind: ['0.0.0.0:8000']
+  raw_env: ['DJANGO_SETTINGS_MODULE=ask.settings']
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f8faff98ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-20 13:24:19 +0000] [684] [INFO] Starting gunicorn 19.4.5
+[2016-04-20 13:24:19 +0000] [684] [DEBUG] Arbiter booted
+[2016-04-20 13:24:19 +0000] [684] [INFO] Listening at: http://0.0.0.0:8000 (684)
+[2016-04-20 13:24:19 +0000] [684] [INFO] Using worker: sync
+[2016-04-20 13:24:19 +0000] [689] [INFO] Booting worker with pid: 689
+[2016-04-20 13:24:19 +0000] [684] [DEBUG] 1 workers
+[2016-04-20 13:24:24 +0000] [689] [DEBUG] GET /
+[2016-04-20 13:24:24 +0000] [689] [DEBUG] GET /
+[2016-04-20 13:24:24 +0000] [689] [DEBUG] GET /login/
+[2016-04-20 13:24:24 +0000] [689] [DEBUG] GET /signup/
+[2016-04-20 13:24:24 +0000] [689] [DEBUG] GET /question/321/
+[2016-04-20 13:24:24 +0000] [689] [DEBUG] GET /question/77/
+[2016-04-20 13:24:24 +0000] [689] [DEBUG] GET /ask//popular/
+[2016-04-20 13:24:24 +0000] [689] [DEBUG] GET /new/
+[2016-04-20 13:24:24 +0000] [689] [DEBUG] GET /blablabla/
+[2016-04-20 13:29:04 +0000] [689] [DEBUG] GET /
+[2016-04-20 13:29:04 +0000] [689] [DEBUG] GET /
+[2016-04-20 13:29:04 +0000] [689] [DEBUG] GET /login/
+[2016-04-20 13:29:04 +0000] [689] [DEBUG] GET /signup/
+[2016-04-20 13:29:04 +0000] [689] [DEBUG] GET /question/321/
+[2016-04-20 13:29:04 +0000] [689] [DEBUG] GET /question/77/
+[2016-04-20 13:29:04 +0000] [689] [DEBUG] GET /ask//popular/
+[2016-04-20 13:29:04 +0000] [689] [DEBUG] GET /new/
+[2016-04-20 13:29:04 +0000] [689] [DEBUG] GET /blablabla/
+[2016-04-20 13:31:16 +0000] [684] [INFO] Handling signal: int
+[2016-04-20 13:31:16 +0000] [689] [INFO] Worker exiting (pid: 689)
+[2016-04-20 13:31:16 +0000] [684] [INFO] Shutting down: Master
+[2016-04-20 13:31:22 +0000] [811] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7ff318297410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7ff318297140>
+  pre_fork: <function pre_fork at 0x7ff3182972a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/box/web/log/access-gunicorn.log
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 1
+  proc_name: None
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7ff31828af50>
+  pre_exec: <function pre_exec at 0x7ff3182979b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7ff318297578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7ff31829a0c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7ff318297b18>
+  post_request: <function post_request at 0x7ff318297c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7ff3182976e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7ff318297d70>
+  chdir: /home/box/web/ask
+  paste: None
+  default_proc_name: ask.wsgi
+  errorlog: /home/box/web/log/error-gunicorn.log
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7ff31828ade8>
+  worker_abort: <function worker_abort at 0x7ff318297848>
+  bind: ['0.0.0.0:8000']
+  raw_env: ['DJANGO_SETTINGS_MODULE=ask.settings']
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7ff318297ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-20 13:31:22 +0000] [811] [INFO] Starting gunicorn 19.4.5
+[2016-04-20 13:31:22 +0000] [811] [DEBUG] Arbiter booted
+[2016-04-20 13:31:22 +0000] [811] [INFO] Listening at: http://0.0.0.0:8000 (811)
+[2016-04-20 13:31:22 +0000] [811] [INFO] Using worker: sync
+[2016-04-20 13:31:22 +0000] [816] [INFO] Booting worker with pid: 816
+[2016-04-20 13:31:22 +0000] [811] [DEBUG] 1 workers
+[2016-04-20 13:31:27 +0000] [816] [DEBUG] GET /
+[2016-04-20 13:31:28 +0000] [816] [DEBUG] GET /
+[2016-04-20 13:31:28 +0000] [816] [DEBUG] GET /login/
+[2016-04-20 13:31:28 +0000] [816] [DEBUG] GET /signup/
+[2016-04-20 13:31:28 +0000] [816] [DEBUG] GET /question/321/
+[2016-04-20 13:31:28 +0000] [816] [DEBUG] GET /question/77/
+[2016-04-20 13:31:28 +0000] [816] [DEBUG] GET /ask//popular/
+[2016-04-20 13:31:28 +0000] [816] [DEBUG] GET /new/
+[2016-04-20 13:31:28 +0000] [816] [DEBUG] GET /blablabla/
+[2016-04-20 13:33:48 +0000] [811] [INFO] Handling signal: int
+[2016-04-20 13:33:48 +0000] [816] [INFO] Worker exiting (pid: 816)
+[2016-04-20 13:33:48 +0000] [811] [INFO] Shutting down: Master
+[2016-04-20 13:35:47 +0000] [997] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f7e74381410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f7e74381140>
+  pre_fork: <function pre_fork at 0x7f7e743812a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/box/web/log/access-gunicorn.log
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 1
+  proc_name: None
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f7e74374f50>
+  pre_exec: <function pre_exec at 0x7f7e743819b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f7e74381578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f7e743840c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f7e74381b18>
+  post_request: <function post_request at 0x7f7e74381c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f7e743816e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f7e74381d70>
+  chdir: /home/box/web/ask
+  paste: None
+  default_proc_name: ask.wsgi
+  errorlog: /home/box/web/log/error-gunicorn.log
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f7e74374de8>
+  worker_abort: <function worker_abort at 0x7f7e74381848>
+  bind: ['0.0.0.0:8000']
+  raw_env: ['DJANGO_SETTINGS_MODULE=ask.settings']
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f7e74381ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-20 13:35:47 +0000] [997] [INFO] Starting gunicorn 19.4.5
+[2016-04-20 13:35:47 +0000] [997] [DEBUG] Arbiter booted
+[2016-04-20 13:35:47 +0000] [997] [INFO] Listening at: http://0.0.0.0:8000 (997)
+[2016-04-20 13:35:47 +0000] [997] [INFO] Using worker: sync
+[2016-04-20 13:35:47 +0000] [1002] [INFO] Booting worker with pid: 1002
+[2016-04-20 13:35:47 +0000] [997] [DEBUG] 1 workers
+[2016-04-20 13:36:09 +0000] [1002] [DEBUG] GET /
+[2016-04-20 13:36:09 +0000] [1002] [DEBUG] GET /
+[2016-04-20 13:36:09 +0000] [1002] [DEBUG] GET /login/
+[2016-04-20 13:36:09 +0000] [1002] [DEBUG] GET /signup/
+[2016-04-20 13:36:09 +0000] [1002] [DEBUG] GET /question/321/
+[2016-04-20 13:36:09 +0000] [1002] [DEBUG] GET /question/77/
+[2016-04-20 13:36:09 +0000] [1002] [DEBUG] GET /ask//popular/
+[2016-04-20 13:36:09 +0000] [1002] [DEBUG] GET /new/
+[2016-04-20 13:36:09 +0000] [1002] [DEBUG] GET /blablabla/
+[2016-04-20 13:36:09 +0000] [1002] [DEBUG] GET /
