@@ -11,8 +11,12 @@ from django.http import HttpResponse
 
 def home(request):
     return HttpResponse('Hello World')
-def login(request):
-    return HttpResponse('OK')
+def login(request, *args, **kwargs):
+  # id = args['id'] # это неправильно синтаксичечки
+    id = kwargs['id'] # это правильно
+  # id = request.arggs # неправильно, это другой способ можно написать 
+    resp = 'OK ' + str(id)
+    return HttpResponse(resp)
 def signup(request):
     return HttpResponse('OK')
 def ask(request):

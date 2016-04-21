@@ -10,7 +10,7 @@ admin.autodiscover()
 #/popular/
 #/new/
 urlpatterns = [
-    url(r'^login/', views.login, name='login'),
+    url(r'^login/(?P<id>\d+)/?', views.login, name='login'),
     url(r'^signup/', views.signup, name='signup'),
     url(r'^ask/', views.ask, name='ask'),
     url(r'^popular/', views.popular, name='popular'),
