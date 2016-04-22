@@ -13,6 +13,7 @@ sudo rm -f /etc/gunicorn.d/wsgi.example
 sudo rm -f /etc/gunicorn.d/test
 
 #rock our custom configs  to work
+sudo ln -sf /home/box/web/etc/mysql.cnf  /etc/mysql/conf.d/django.cnf
 sudo ln -sf /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/test.conf
 sudo ln -sf /home/box/web/etc/nginx-main /etc/nginx/nginx.conf
 sudo ln -sf /home/box/web/etc/gunicorn.conf /etc/gunicorn.d/test
