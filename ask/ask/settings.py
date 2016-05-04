@@ -57,10 +57,28 @@ WSGI_APPLICATION = 'ask.wsgi.application'
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+   'default': {
+        'NAME': 'default',
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': '/home/box/web/etc/mysql.cnf',
+        }
+        #'USER': 'root',
+        #'PASSWORD': ''
+   },
+   'ask': {
+        'NAME': 'ask',
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': '/home/box/web/etc/mysql.cnf',
+        }
+        #'USER': 'root',
+        #'PASSWORD': ''
+   },
+   'sqlitedb': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+   }
 }
 
 # Internationalization
