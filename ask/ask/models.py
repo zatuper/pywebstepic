@@ -19,14 +19,19 @@ from django.db import models
 from datetime import datetime  
 
 class Like(models.Model):
-    user = models.CharField(max_length=254, default='testauthor')
+    user = models.CharField(max_length=254, default="testuser")
     verbose_name = 'q amd a like user'
     
-    def __str__(self):              # __unicode__ on Python 2
-        return self.name    
+    def __str__(self):              
+      # __unicode__ on Python 2
+       
+        return self.verbose_name    
     
+    class Meta:
+        db_table = "like"
+        
 class Author(models.Model):
-    name = models.CharField(max_length=254, default='testauthor')
+    name = models.CharField(max_length=254, default="testauthor")
     verbose_name = 'q amd a author'
 
     def __str__(self):              # __unicode__ on Python 2
