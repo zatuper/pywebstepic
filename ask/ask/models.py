@@ -39,13 +39,12 @@ class Author(models.Model):
       
 class Question(models.Model):
     title = models.CharField(max_length=254)
-    name = models.CharField(max_length=254)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    body = models.TextField()
     added_at = models.DateField(default=datetime.now, blank=True)
-    text = models.TextField()
-    rating = models.BigIntegerField()
-    likes = models.ManyToManyField(Like)
+    text = models.TextField(default="", blank=True)
+    rating = models.IntegerField(default=0)
+    like = models.ManyToManyField(Like)
+    
     def __str__(self):              # __unicode__ on Python 2
         return self.name      
      
@@ -67,9 +66,8 @@ class Answer(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     name = models.CharField(max_length=254)
-    body = models.TextField()
     added_at = models.DateField(default=datetime.now, blank=True)
-    text = models.TextField()
+    text = models.TextField(default="", blank=True)
 
     def __str__(self):              # __unicode__ on Python 2
         return self.name
@@ -79,7 +77,7 @@ class Post(models.Model):
     Tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
     Question = models.ForeignKey(Question, on_delete=models.CASCADE)
     # Answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
-    Count = models.BigIntegerField()
+    Count = models.BigIntegerField(default=0)
      
     
     def __str__(self):              # __unicode__ on Python 2
