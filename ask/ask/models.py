@@ -43,21 +43,15 @@ class Question(models.Model):
     added_at = models.DateField(default=datetime.now, blank=True)
     text = models.TextField(default="", blank=True)
     rating = models.IntegerField(default=0)
-    like = models.ManyToManyField(Like)
+    like = models.ManyToManyField(Like, blank=True)
     
     def __str__(self):              # __unicode__ on Python 2
         return self.name      
-     
-      
-      
       
 class Tag(models.Model):
     verbose_name = 'q amd a tag'
     name = models.CharField(max_length=128, default="test")
-    members = models.ManyToManyField(
-        Question,
-        through='Post',
-        through_fields=('Tag', 'Question'),)
+    members = models.ManyToManyField(Question, blank=True)
     
     def __str__(self):              # __unicode__ on Python 2
         return self.name
@@ -71,14 +65,3 @@ class Answer(models.Model):
 
     def __str__(self):              # __unicode__ on Python 2
         return self.name
-
-class Post(models.Model):
-    verbose_name = 'qa submited tag'  
-    Tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
-    Question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    # Answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
-    Count = models.BigIntegerField(default=0)
-     
-    
-    def __str__(self):              # __unicode__ on Python 2
-        return self.verbose_name  

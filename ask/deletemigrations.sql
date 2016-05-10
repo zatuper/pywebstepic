@@ -1,4 +1,4 @@
-DELETE FROM django_migrations WHERE app='ask'
+DELETE FROM django_migrations WHERE app='ask';
 SET FOREIGN_KEY_CHECKS = 0; 
 SET @tables = NULL;
 SELECT GROUP_CONCAT(table_schema, '.', table_name) INTO @tables

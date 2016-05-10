@@ -1,8 +1,10 @@
 # from http://www.tangowithdjango.com/book/chapters/models.html
 
 import os
+from ask.models import Author, Question
 
 def populate():
+    print "test-print",
     test_author=add_author('testauth')
 
     add_quest(author=test_author,
@@ -47,7 +49,7 @@ def populate():
             print "- {0} - {1}".format(str(auth), str(q))
 
 def add_quest(author, title, text, rating=0):
-    q = Question.objects.get_or_create(Author=author, title=title, text=text, rating=rating)[0]
+    q = Question.objects.get_or_create(Author=author, title=title, text=text, rating=0)[0]
     return q
 
 def add_author(name):
@@ -58,5 +60,4 @@ def add_author(name):
 if __name__ == '__main__':
     print "Starting ask population script..."
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ask.settings')
-    from ask.models import Author, Question
     populate()
