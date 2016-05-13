@@ -45,3 +45,6 @@ PREPARE stmt FROM @tables;
 EXECUTE stmt;
 DEALLOCATE PREPARE stmt;
 SET FOREIGN_KEY_CHECKS = 1; 
+
+исходный файл settings.py нужно апгредить до версии 1.9 темплейты записываются по новому
+https://docs.djangoproject.com/en/dev/ref/templates/upgrading/
