@@ -14,6 +14,7 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^login/(?P<id>\d+)/?', views.login, name='login'),
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^signup/', views.signup, name='signup'),
     url(r'^ask/', views.ask, name='ask'),
     url(r'^popular/', views.popular, name='popular'),

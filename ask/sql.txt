@@ -1,0 +1,46 @@
+BEGIN;
+--
+-- Create model Answer
+--
+CREATE TABLE `ask_answer` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(254) NOT NULL, `added_at` date NOT NULL, `text` longtext NOT NULL);
+--
+-- Create model Author
+--
+CREATE TABLE `ask_author` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(254) NOT NULL);
+--
+-- Create model Like
+--
+CREATE TABLE `like` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `user` varchar(254) NOT NULL);
+--
+-- Create model Question
+--
+CREATE TABLE `ask_question` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `title` varchar(254) NOT NULL, `added_at` date NOT NULL, `text` longtext NOT NULL, `rating` integer NOT NULL, `author_id` integer NOT NULL);
+CREATE TABLE `ask_question_like` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `question_id` integer NOT NULL, `like_id` integer NOT NULL);
+--
+-- Create model Tag
+--
+CREATE TABLE `ask_tag` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(128) NOT NULL);
+CREATE TABLE `ask_tag_members` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `tag_id` integer NOT NULL, `question_id` integer NOT NULL);
+--
+-- Add field author to answer
+--
+ALTER TABLE `ask_answer` ADD COLUMN `author_id` integer NOT NULL;
+ALTER TABLE `ask_answer` ALTER COLUMN `author_id` DROP DEFAULT;
+--
+-- Add field question to answer
+--
+ALTER TABLE `ask_answer` ADD COLUMN `question_id` integer NOT NULL;
+ALTER TABLE `ask_answer` ALTER COLUMN `question_id` DROP DEFAULT;
+ALTER TABLE `ask_question` ADD CONSTRAINT `ask_question_author_id_0c086e9a_fk_ask_author_id` FOREIGN KEY (`author_id`) REFERENCES `ask_author` (`id`);
+ALTER TABLE `ask_question_like` ADD CONSTRAINT `ask_question_like_question_id_7caad385_fk_ask_question_id` FOREIGN KEY (`question_id`) REFERENCES `ask_question` (`id`);
+ALTER TABLE `ask_question_like` ADD CONSTRAINT `ask_question_like_like_id_8f2671eb_fk_like_id` FOREIGN KEY (`like_id`) REFERENCES `like` (`id`);
+ALTER TABLE `ask_question_like` ADD CONSTRAINT `ask_question_like_question_id_c3617ca3_uniq` UNIQUE (`question_id`, `like_id`);
+ALTER TABLE `ask_tag_members` ADD CONSTRAINT `ask_tag_members_tag_id_70f955bd_fk_ask_tag_id` FOREIGN KEY (`tag_id`) REFERENCES `ask_tag` (`id`);
+ALTER TABLE `ask_tag_members` ADD CONSTRAINT `ask_tag_members_question_id_f5d7221f_fk_ask_question_id` FOREIGN KEY (`question_id`) REFERENCES `ask_question` (`id`);
+ALTER TABLE `ask_tag_members` ADD CONSTRAINT `ask_tag_members_tag_id_e811f5a1_uniq` UNIQUE (`tag_id`, `question_id`);
+CREATE INDEX `ask_answer_4f331e2f` ON `ask_answer` (`author_id`);
+ALTER TABLE `ask_answer` ADD CONSTRAINT `ask_answer_author_id_a3ba1f25_fk_ask_author_id` FOREIGN KEY (`author_id`) REFERENCES `ask_author` (`id`);
+CREATE INDEX `ask_answer_7aa0f6ee` ON `ask_answer` (`question_id`);
+ALTER TABLE `ask_answer` ADD CONSTRAINT `ask_answer_question_id_0fae946f_fk_ask_question_id` FOREIGN KEY (`question_id`) REFERENCES `ask_question` (`id`);
+
+COMMIT;

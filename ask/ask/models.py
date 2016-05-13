@@ -46,7 +46,7 @@ class Question(models.Model):
     like = models.ManyToManyField(Like, blank=True)
     
     def __str__(self):              # __unicode__ on Python 2
-        return self.name      
+        return self.title     
       
 class Tag(models.Model):
     verbose_name = 'q amd a tag'
