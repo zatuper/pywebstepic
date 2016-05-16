@@ -1,4 +1,5 @@
 usefull reading on django templates
+http://www.slideshare.net/Technopark/6-web-31460597 # полноый текст лекции 
 https://docs.djangoproject.com/en/1.8/ref/templates/api/#the-dirs-option
 sudo pip install django-mysql 
 созданы две базы после миграции используется default

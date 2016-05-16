@@ -1,4 +1,6 @@
 #-*- coding: utf-8 -*-
+# сохраните все введенные команды в отдельном файле, что бы потом вы могли легко их повторить.
+
 # 3) В вашем приложении qa  в файле models.py определите следующие модели обладающие следующими полями (названия моделей и полей важны!)
 
 # Question - вопрос
@@ -14,6 +16,11 @@
 # added_at - дата добавления ответа
 # question - вопрос, к которому относится ответ
 # author - автор ответа
+
+# В качестве модели пользователя - используйте django.contrib.auth.models.User  из стандартной системы авторизации Django.
+
+# 4) С помощью команды manage.py /syncdb  создайте необходимые таблицы для ваших моделей -- в django  версии > 1.6 migrate
+# 5) Не забудьте закомитить и сохранить на github созданные файлы.
 
 from django.db import models
 from datetime import datetime  
@@ -44,9 +51,12 @@ class Question(models.Model):
     text = models.TextField(default="", blank=True)
     rating = models.IntegerField(default=0)
     like = models.ManyToManyField(Like, blank=True)
+     
     
     def __str__(self):              # __unicode__ on Python 2
         return self.title     
+    def get_absolute_url(self):                          # 7
+        return '/question/%d/' % self.pk                 # 8 
       
 class Tag(models.Model):
     verbose_name = 'q amd a tag'
