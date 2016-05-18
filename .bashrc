@@ -1,4 +1,3 @@
-export PROGRAMMING_FOLDER='/home/box/web/ask'
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -118,4 +117,7 @@ PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1
  
 #PYTHONPATH='~/web/ask'                
 source $HOME/.django_bash_completion.sh 
-source /etc/bash_completion.d/git
+source $HOME/.git-completion.bash
+source $HOME/web/russlocale.sh
+export GREP_OPTIONS='--color=auto'
+export PROGRAMMING_FOLDER=$HOME/web/ask
