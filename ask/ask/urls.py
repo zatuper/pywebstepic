@@ -15,14 +15,16 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^login/(?P<id>\d+)/?', views.login, name='login'),
     url(r'^admin/', include(admin.site.urls)),
+#   url(r'^(?P<Page>[0-9]+)/$', views.index, name='index'),
+    url(r'^question/(?P<question_id>[0-9]+)/$', views.question, name='question'),
     url(r'^signup/', views.signup, name='signup'),
     url(r'^ask/', views.ask, name='ask'),
     url(r'^popular/', views.popular, name='popular'),
     url(r'^new/', views.new, name='new'),
-    url(r'^view/', views.view, name='view'),  
+#   url(r'^view/', views.view, name='view'),  
     url(r'^$',     include('qa.urls')),
-    url(r'^question/([0-9]{3})/$', include('qa.urls')),
-    url(r'^question/(\d+)/$', include('qa.urls')),
+#   url(r'^question/([0-9]{3})/$', include('qa.urls')),
+#   url(r'^question/(\d+)/$', include('qa.urls')),
     url(r'^blog/', include('blog.urls')),
  
 ]

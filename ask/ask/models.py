@@ -42,7 +42,7 @@ class Like(models.Model):
 @python_2_unicode_compatible        
 class Author(models.Model):
     name = models.CharField(max_length=254, default="testauthor")
-    verbose_name = 'q amd a author'
+    verbose_name = 'q amd a author is '
 
     def __str__(self):     
         return self.name

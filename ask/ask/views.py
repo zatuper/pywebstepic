@@ -1,28 +1,35 @@
 # -*- coding: utf-8 -*-
+# то что из задания относится к views.py:
+# 2) Создайте view для обработки следующих страниц
+# URL = /?page=2
+# Главная страница. Список "новых" вопросов. Т.е. последний заданный вопрос - первый в списке. 
+# На этой странице должна работать пагинация. Номер страницы указывается в GET параметре page.  
+# На страницу выводится по 10 вопросов. В списке вопросов должны выводится заголовки (title) вопросов 
+# и ссылки на страницы отдельных вопросов.
+# URL = /popular/?page=3
+# Cписок "популярных" вопросов. Сортировка по убыванию поля rating. На этой странице 
+# должна работать пагинация. Номер страницы указывается в GET параметре page.  На страницу выводится 
+# по 10 вопросов. В списке вопросов должны выводится заголовки (title) вопросов и ссылки на страницы 
+# отдельных вопросов.
+# URL = /question/5/
+# Страница одного вопроса. На этой странице должны выводится заголовок 
+# (title), текст (text) вопроса и все ответы на данный вопрос, без пагинации. 
+# В случае неправильного id вопроса view должна возвращать 404.
 from django.shortcuts import render
 from django.http import HttpResponse 
 from django.template.loader import get_template
-# Create your views here.
-#/login/
-#/signup/
-#/question/<123>/    # вместо <123> - произвольный ID
-#/ask/
-#/popular/
-#/new/
-# Выберите правильные способы получения GET параметров в Django view 
-# Напишите текст (без переносов строк и пробелов), который получится при шаблонизации index.html - 
-# (ответ в контроллере popular)
+from ask.models import Question
 
-def view(request):
-  # value = request.get('name')
-  # value = request['name']
-  # value = request.GET('name')
-    value = request.GET['name'] # правильно
-  # value = request.GET.get('name') #тоже правильно, но еще напишет Not Found: /favicon.ico 
-    return  HttpResponse(value)
+def question(request, question_id):
+    try:
+        question = Question.objects.get(pk=question_id)
+    except Question.DoesNotExist:
+        raise Http404("Question does not exist")
+# {'question': question})
+        template = get_template('question.html')       
+        html = template.render({'question': question})
+        return HttpResponse(html)
 
-def home(request):
-    return HttpResponse('Hello World')
 def login(request, *args, **kwargs):
   # id = args['id'] # это неправильно синтаксичечки
     id = kwargs['id'] # это правильно
@@ -39,4 +46,6 @@ def popular(request):
     return HttpResponse(html)
 def new(request):
     return HttpResponse('OK')
+  
+  
   
