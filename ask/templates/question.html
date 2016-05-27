@@ -1,1 +1,14 @@
-{{ question }}
+{% extends "base.html" %}
+{% block content %}
+{% autoescape on %}
+<h1>{{ question }}</h1>
+<ul>
+  <li>{{ question_id }} </br> это поле ID в базе данных</li> 
+  <li>{{ question_author }} </br> это поле Автор </li>
+  <li>{{ question_text }} </br> это поле текст</li>
+  
+  
+</ul>
+{% endautoescape %}
+{% endblock content %}
+

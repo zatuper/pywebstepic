@@ -16,7 +16,7 @@ urlpatterns = [
     url(r'^login/(?P<id>\d+)/?', views.login, name='login'),
     url(r'^admin/', include(admin.site.urls)),
 #   url(r'^(?P<Page>[0-9]+)/$', views.index, name='index'),
-    url(r'^question/(?P<question_id>[0-9]+)/$', views.question, name='question'),
+    url(r'^question/(?P<question_id>\d+)/$', views.question, name='question'),
     url(r'^signup/', views.signup, name='signup'),
     url(r'^ask/', views.ask, name='ask'),
     url(r'^popular/', views.popular, name='popular'),

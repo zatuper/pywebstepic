@@ -1,4 +1,13 @@
-{% extends 'base.html' %}
-D
-{% block A %}{{ block.super }}E{% endblock %}
-F
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Content for My App</h2>
+    <p>question {{question}}  {{question_id}}</p>
+<ul> {{question}}
+  <li>{{ question_id }}</li> 
+  <li>{{ question_author }}</li>
+  <li>{{ question_title }}</li>
+  <li>{{ question_text }}</li>
+  
+</ul>
+{% endblock content %}
