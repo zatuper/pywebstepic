@@ -133,3 +133,4 @@ source $HOME/.git-completion.bash
 # source $HOME/web/russlocale.sh
 export GREP_OPTIONS='--color=auto'
 export PROGRAMMING_FOLDER=$HOME/web/ask
+export GPGKEY=7A51A6FA
