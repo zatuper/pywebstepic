@@ -142,3 +142,6 @@ else
     eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
 fi
 export GPGKEY=80BA91D1
+#w/o these 2 lines gnupg-agent forget the pass
+export GPG_TTY=$(tty)
+sudo chmod o+rw $(tty)
