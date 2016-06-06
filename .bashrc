@@ -133,4 +133,12 @@ source $HOME/.git-completion.bash
 # source $HOME/web/russlocale.sh
 export GREP_OPTIONS='--color=auto'
 export PROGRAMMING_FOLDER=$HOME/web/ask
-export GPGKEY=7A51A6FA
+
+# old style - eval $(gpg-agent --daemon)
+if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
+    source ~/.gnupg/.gpg-agent-info
+    export GPG_AGENT_INFO
+else
+    eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+fi
+export GPGKEY=80BA91D1
