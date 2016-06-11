@@ -1,6 +1,26 @@
+# this file has particular version and mustnot commited to upstream nor changed by PULL so:
+# I understand that you want your local copies to "override" what's in the remote, but, oh, man,
+# if someone has modified the files in the remote repo in some different way, and you just 
+# ignore their changes and try to "force" your own changes without even looking 
+# at possible conflicts, well, I weep for you (and your coworkers) ;-)
+# That said, though, it's really easy to do the "right thing..."
+# Step 1:
+# git stash
+# in your local repo. That will save away your local updates into the stash, then revert your modified files back to their pre-edit state.
+# Step 2:
+# git pull
+# to get any modified versions. Now, hopefully, that won't get any new versions of the files you're worried about. If it doesn't, then the next step will work smoothly. If it does, then you've got some work to do, and you'll be glad you did.
+# Step 3:
+# git stash pop
+# That will merge your modified versions that you stashed away in Step 1 with the versions you just pulled in Step 2. If everything goes smoothly, then you'll be all set!
+
 [mysqld]
-default-character-set=utf8
-collation_server=utf8_unicode_ci
+init_connect='SET collation_connection = utf8_unicode_ci'
+init_connect='SET NAMES utf8'
+character-set-server=utf8
+collation-server=utf8_unicode_ci
+skip-character-set-client-handshake 
+
 
 [client]
 default-character-set=utf8 

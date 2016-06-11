@@ -135,13 +135,15 @@ export GREP_OPTIONS='--color=auto'
 export PROGRAMMING_FOLDER=$HOME/web/ask
 
 # old style - eval $(gpg-agent --daemon)
+#after gpg -k my key is on 7th line
+export GPGKEY="$(gpg -K | awk 'NR==7 {print $2}' | sed 's/4096R\///g')"
 if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
     source ~/.gnupg/.gpg-agent-info
     export GPG_AGENT_INFO
 else
     eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
 fi
-export GPGKEY=80BA91D1
-#w/o these 2 lines gnupg-agent forget the pass
+
+#w/o these 2 lines gnupg-agent forget the pass for git
 export GPG_TTY=$(tty)
 sudo chmod o+rw $(tty)
