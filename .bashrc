@@ -145,5 +145,6 @@ else
 fi
 
 #w/o these 2 lines gnupg-agent forget the pass for git
-export GPG_TTY=$(tty)
 sudo chmod o+rw $(tty)
+export GPG_TTY=$(tty)
+
